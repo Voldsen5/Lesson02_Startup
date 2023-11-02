@@ -1,0 +1,19 @@
+﻿@using Lesson02_Startup.Models;
+
+@model List<Person>
+
+
+@{
+    foreach (Person p in Model)
+    {
+        <p>Navn: @p.firstName @p.lastName er @p.age år gammel</p>
+        <p>Bor på: @p.address @p.zip @p.city </p>
+        <p> @string.Join(", ", p.getPhoneNumbers()); </p>
+        <br>
+    }
+
+}
+
+@helper RenderPerson(Person person) { 
+        string.Join(", ", person.getPhoneNumbers());
+    }

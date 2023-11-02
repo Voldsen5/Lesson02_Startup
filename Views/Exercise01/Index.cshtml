@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<a href="@HttpContext.Current.Request.Url">Lesson 2: Exercise 1</a>
+
+<h2>@ViewBag.Glass.Name</h2>
+<p>Price: @String.Format("{0:0.00}", ViewBag.Glass.Price)</p>
+<p><img src="content\images\@ViewBag.Glass.ImageUrl" alt="@ViewBag.Glass.Name" /></p>
+
+<h2>@ViewBag.Kniv.Name</h2>
+<p>Price: @String.Format("{0:0.00}", ViewBag.Kniv.Price)</p>
+<p><img src="content\images\@ViewBag.Kniv.ImageUrl" alt="@ViewBag.Kniv.Name" /></p>
+
+<h2>@ViewBag.Bin.Name</h2>
+<p>Price: @String.Format("{0:0.00}", ViewBag.Bin.Price)</p>
+<p><img src="content\images\@ViewBag.Bin.ImageUrl" alt="@ViewBag.Bin.Name" /></p>
